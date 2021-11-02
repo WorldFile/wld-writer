@@ -1,6 +1,6 @@
 {
   "name": "wld-writer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Write World Files (e.g., .gfw, .jgw, .j2w, .pgw, .tfw, and .wld)",
   "main": "index.js",
   "files": [
