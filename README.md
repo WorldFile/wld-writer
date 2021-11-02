@@ -45,6 +45,7 @@ You can write with those, too.
 ```js
 const data = {
   xScale: "2445.9849051249894123456789",
+  ySkew: 0,
   //...
 }
 writeWorldFile(data);
