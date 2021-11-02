@@ -44,7 +44,7 @@ you may store your parameters as strings instead of numbers.
 You can write with those, too.
 ```js
 const data = {
-  xScale: 2445.9849051249894123456789,
+  xScale: "2445.9849051249894123456789",
   //...
 }
 writeWorldFile(data);
