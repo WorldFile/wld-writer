@@ -8,7 +8,7 @@ npm install wld-writer
 ```
 ### install via script tag
 ```
-<script src="https://unpkg.com/wld-writer">
+<script src="https://unpkg.com/wld-writer"></script>
 ```
 
 # usage
