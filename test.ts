@@ -1,5 +1,5 @@
-const test = require("flug");
-const write = require("./index.js");
+import test from "flug";
+import write from "./index.js";
 
 const data = {
   xScale: 2445.9849051249894,
@@ -26,36 +26,6 @@ test("write numerical strings", ({ eq }) => {
 
 test("custom sep", ({ eq }) => {
   eq(write(data, { sep: "\r\n" }), "2445.9849051249894\r\n0\r\n0\r\n-2445.98490512499\r\n7699959.850241235\r\n1323859.6754601842\r\n");
-});
-
-test("undefined", ({ eq }) => {
-  let error;
-  try {
-    write(undefined);
-  } catch (e) {
-    error = e;
-  }
-  eq(error.message, "[wld-writer] can't write a world file without data!");
-});
-
-test("null", ({ eq }) => {
-  let error;
-  try {
-    write(undefined);
-  } catch (e) {
-    error = e;
-  }
-  eq(error.message, "[wld-writer] can't write a world file without data!");
-});
-
-test("xSkew = null", ({ eq }) => {
-  let error;
-  try {
-    write({ ...data, xSkew: null });
-  } catch (e) {
-    error = e;
-  }
-  eq(error.message, "[wld-writer] xSkew is null");
 });
 
 test("write super precise numbers", ({ eq }) => {

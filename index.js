@@ -19,6 +19,16 @@ function writeWorldFile(data, { debug = false, sep = "\n" } = { debug: false, se
   return result;
 }
 
-if (typeof module === "object") module.exports = writeWorldFile;
+if (typeof define === "function" && define.amd) {
+  define(function () {
+    return writeWorldFile;
+  });
+}
+
+if (typeof module === "object") {
+  module.exports = writeWorldFile;
+  module.exports.default = writeWorldFile;
+}
+
 if (typeof self === "object") self.writeWorldFile = writeWorldFile;
 if (typeof window === "object") window.writeWorldFile = writeWorldFile;
